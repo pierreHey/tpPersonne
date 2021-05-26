@@ -36,22 +36,6 @@ function afficherHTML() {
         let tr = document.createElement("tr"); // créer balise <tr> </tr>
         let td1 = document.createElement("td"); // créer balise <td> </td>
         let td2 = document.createElement("td");
-<<<<<<< HEAD
-       let boutonSuppr = document.createElement("button")
-      // boutonSuppr.onclick = supprimerPersonne();
-        boutonSuppr.textContent="Supprimer";
-        boutonSuppr.setAttribute("class","rouge");
-
-        td1.textContent = personne.prenom;
-        td2.textContent = personne.nom;
-        
-        // mettre le td1 dans la balise tr
-        tr.appendChild(td1);
-        tr.appendChild(td2);
-        
-        tr.appendChild(boutonSuppr)
-        
-=======
         let td3 = document.createElement("td");
 
 
@@ -89,7 +73,6 @@ function afficherHTML() {
 
         td2.appendChild(boutonSuppr)
 
->>>>>>> develop
         document.getElementById("liste").appendChild(tr) // <tbody><tr>...
     }
     ajouterFire();
