@@ -6,15 +6,19 @@ let listePersonne = [];
 // on va regarder si tableau != undefined => si vrai => initialise => sinon ajoute nvlle personne
 
 
-
+//----------------------------------------------------------------
+// ajouter
+//----------------------------------------------------------------
 function ajouterPersonne() {
     let nom = document.getElementById("nom").value;
     let prenom = document.getElementById("prenom").value;
     let personne = {};
     personne.nom = nom;
     personne.prenom = prenom;
+    
+    listePersonne.push(personne); // add l'objet personne dans le tableau
 
-    listePersonne.push(personne);
+    console.log(listePersonne);
 
     let param = {}
     param.method = 'PUT'
@@ -30,8 +34,50 @@ function ajouterPersonne() {
         });
 
 
+        afficherHTML()
+}
+//----------------------------------------------------------------
+// afficher
+//----------------------------------------------------------------
+
+function afficherHTML()
+{
+    // je vide le tableau
+    document.getElementById("liste").innerHTML="";
+    // parcours le tableau js pour ajouter <tr><td> ...
+    for(let personne of listePersonne){
+        
+        let tr = document.createElement("tr"); // créer balise <tr> </tr>
+        let td1 = document.createElement("td"); // créer balise <td> </td>
+        let td2 =document.createElement("td");
+        td1.textContent = personne.prenom;
+        td2.textContent = personne.nom;
+        // mettre le td1 dans la balise tr
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        document.getElementById("liste").appendChild(tr) // <tbody><tr>...
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function lire() {
 
