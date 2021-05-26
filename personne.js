@@ -79,3 +79,11 @@ function lire() {
         })
 
 }
+
+//  TP 3 déployer sur Git et sur Firebase hosting :
+//  Ajouter un répertoire docs et venir bloquer avec .gitingore
+//	Ajouter  une branche develop à votre repository et merger cette branche
+//  Ajouter la possibilité d'enlever une personne de la liste et faire un commit & un push
+//  Bonus utiliser fontawesome
+//  Lien git
+
