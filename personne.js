@@ -114,9 +114,6 @@ function lire() {
 }
 
 
-<<<<<<< HEAD
-function supprimerPersonne()  {
-=======
 function supprimerPersonne() {
 
     // pour l'index de la personne dans la liste on va supprimer la personne qui correspond a son index
@@ -150,7 +147,6 @@ function supprimerPersonne() {
 
 
 
->>>>>>> develop
     let param = {}
     param.method = 'DELETE'
     param.header = { 'Content-Type': 'application/json' };
